@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy National Girlfriend Day ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ff9ecf,#ffd6f6,#cde7ff);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
+overflow-x:hidden;
+color:#fff;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+section{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:25px;
+}
+
+.card{
+width:90%;
+max-width:700px;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
+border-radius:25px;
+padding:35px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+h1{
+font-size:2.2rem;
+margin-bottom:20px;
+}
+
+p{
+font-size:1.1rem;
+line-height:1.7;
+margin-bottom:20px;
+}
+
+button{
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+background:#ff4f8b;
+color:white;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+@keyframes glow{
+
+from{
+
+text-shadow:0 0 10px pink;
+
+}
+
+to{
+
+text-shadow:0 0 30px white,
+0 0 50px hotpink;
+
+}
+
+}
+
+@keyframes floatHearts{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+100%{
+
+transform:translateY(-15px);
+
+}
+
+}
+
+#heartRain{
+
+animation:floatHearts .8s infinite alternate;
+
+}
+</style>
+</head>
+
+<body>
+
+<div id="intro" style="
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#111;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+">
+
+<div class="card">
+
+<h1>❤️ Happy National Girlfriend Day ❤️</h1>
+
+<p>
+
+I made something special just for you... 🥹
+
+<br><br>
+
+Press the button below to begin.
+
+</p>
+
+<button id="enterBtn">
+
+💖 Open My Surprise
+
+</button>
+
+</div>
+
+</div>
+
+<audio id="bgMusic" loop>
+
+<source src="song.mp3" type="audio/mpeg">
+
+</audio>
+
+<section id="mainSite" style="display:none;">
+
+<div class="card">
+<h1>Happy National Girlfriend Day ❤️</h1>
+
+<p>
+Aaj ka din duniya ki sabse pyari girlfriend ke naam...
+Aur woh ho tum. ❤️
+</p>
+
+<button id="startBtn">
+Start Our Surprise 💖
+</button>
+
+</div>
+
+</section>
+<script>
+const intro = document.getElementById("intro");
+const music = document.getElementById("bgMusic");
+
+document.getElementById("enterBtn").onclick = function(){
+
+    music.play();
+
+    intro.style.display = "none";
+
+    document.getElementById("mainSite").style.display = "flex";
+
+};
+const btn = document.getElementById("startBtn");
+
+btn.onclick = function(){
+
+document.querySelector(".card").innerHTML = `
+
+<h1>Welcome Baby ❤️</h1>
+
+<p>
+I made something special just for you...
+Ready to begin our little journey? 🥹💕
+</p>
+
+<button id="nextBtn">
+Let's Go ❤️
+</button>
+
+`;
+
+document.getElementById("nextBtn").onclick=function(){
+
+document.querySelector(".card").innerHTML = `
+
+<h1>🤖 Love AI Scanner</h1>
+
+<p id="scanText">
+Initializing...
+</p>
+
+<div style="
+width:100%;
+height:20px;
+background:rgba(255,255,255,.3);
+border-radius:20px;
+overflow:hidden;
+margin-top:25px;
+">
+
+<div id="bar" style="
+width:0%;
+height:100%;
+background:#ff4f8b;
+transition:.8s;
+"></div>
+
+</div>
+
+`;
+let steps=[
+"Connecting to Love Satellite... 🛰️",
+"Reading Baby's Smile... 😊",
+"Checking Cute Level... 💖",
+"Finding Jagat's Heart... ❤️",
+"Love Scan Complete... ✨"
+];
+
+let i=0;
+
+let timer=setInterval(function(){
+
+document.getElementById("scanText").innerHTML=steps[i];
+
+document.getElementById("bar").style.width=((i+1)*20)+"%";
+
+i++;
+
+if(i==steps.length){
+
+clearInterval(timer);
+
+setTimeout(function(){
+
+document.querySelector(".card").innerHTML = `
+
+<h1>❤️ Compatibility Result ❤️</h1>
+
+<h2 style="font-size:45px;margin:20px 0;">
+Jagat ❤️ Snoor
+</h2>
+
+<h1 style="font-size:65px;color:#ffeb3b;text-shadow:0 0 15px gold;">
+9999%
+</h1>
+
+<p style="margin-top:20px;">
+✅ Daily Care Detected<br><br>
+✅ Unlimited Teasing Detected<br><br>
+✅ Overthinking Together<br><br>
+✅ Lifetime Warranty Found ❤️
+</p>
+
+<button id="certificateBtn">
+📜 Download Love Certificate
+</button>
+
+`;
+document.getElementById("certificateBtn").onclick=function(){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>📜 Love Certificate</h1>
+
+<p style="font-size:22px;line-height:2;">
+
+This Certificate proudly confirms that
+
+<b>Snoor ❤️</b>
+
+is officially the
+
+<b>World's Best Girlfriend</b>
+
+and has permanent ownership of
+
+<b>Jagat's Heart ❤️</b>
+
+<br><br>
+
+Valid Until:
+<b>Forever ♾️</b>
+
+</p>
+
+<button id="osBtn">
+Continue ❤️
+</button>
+
+`;
+document.getElementById("osBtn").onclick=function(){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>📸 My Beautiful Girl ❤️</h1>
+
+<div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:25px;">
+
+<div>
+<img src="photo1.jpg"
+style="
+width:200px;
+height:250px;
+object-fit:cover;
+border-radius:20px;
+border:4px solid white;
+box-shadow:0 0 20px pink;
+display:block;
+margin:auto;
+">
+
+<p style="margin-top:12px;font-size:18px;font-weight:bold;">
+My Favorite Smile 😊
+</p>
+</div>
+
+<div>
+<img src="photo2.jpeg"
+style="
+width:200px;
+height:250px;
+object-fit:cover;
+border-radius:20px;
+border:4px solid white;
+box-shadow:0 0 20px pink;
+display:block;
+margin:auto;
+">
+
+<p style="margin-top:12px;font-size:18px;font-weight:bold;">
+My Whole World ❤️
+</p>
+</div>
+
+</div>
+
+<br>
+
+<button id="nextOS">
+Continue ➜
+</button>
+
+`;
+document.getElementById("nextOS").onclick=function(){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>😂 Girlfriend Operating System</h1>
+
+<p id="osText">
+Starting Installation...
+</p>
+
+<div style="
+width:100%;
+height:22px;
+background:rgba(255,255,255,.3);
+border-radius:30px;
+overflow:hidden;
+margin-top:20px;">
+
+<div id="osBar" style="
+width:0%;
+height:100%;
+background:#00ff88;
+transition:.8s;">
+</div>
+
+</div>
+
+`;
+
+let installSteps=[
+"Installing Cute Mode... 😊",
+"Installing Drama Mode... 😂",
+"Installing Angry Mode... 😤",
+"Installing Baby Mode... 🥹",
+"Installing Hug Mode... 🤗",
+"Installing Kiss Protection... 😘",
+"Installation Complete ❤️"
+];
+
+let j=0;
+
+let install=setInterval(function(){
+
+document.getElementById("osText").innerHTML=installSteps[j];
+
+document.getElementById("osBar").style.width=((j+1)*14.3)+"%";
+
+j++;
+
+if(j==installSteps.length){
+
+clearInterval(install);
+
+setTimeout(function(){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>✅ Installation Complete ❤️</h1>
+
+<p style="font-size:22px;line-height:2;">
+
+Warning ⚠️<br><br>
+
+This Girlfriend Cannot Be Replaced ❤️<br><br>
+
+Lifetime License Activated 💖
+
+</p>
+
+<button id="gameBtn">
+🎮 Continue
+</button>
+
+`;
+document.getElementById("gameBtn").onclick=function(){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>❤️ Catch My Heart ❤️</h1>
+
+<p id="score">
+Catch 5 Hearts ❤️ (0/5)
+</p>
+
+<div id="gameArea" style="
+position:relative;
+width:100%;
+height:350px;
+background:rgba(255,255,255,.15);
+border-radius:20px;
+margin-top:20px;
+overflow:hidden;
+">
+
+<div id="heart" style="
+position:absolute;
+font-size:45px;
+cursor:pointer;
+left:40%;
+top:40%;
+user-select:none;
+">
+❤️
+</div>
+
+</div>
+
+`;
+
+let score=0;
+
+const heart=document.getElementById("heart");
+
+heart.onclick=function(){
+
+score++;
+
+document.getElementById("score").innerHTML=
+"Catch 5 Hearts ❤️ ("+score+"/5)";
+
+let x=Math.random()*250;
+let y=Math.random()*250;
+
+heart.style.left=x+"px";
+heart.style.top=y+"px";
+
+if(score>=5){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>🎉 Congratulations Baby ❤️</h1>
+
+<p style="font-size:22px;line-height:2;">
+
+You collected Jagat's Heart Forever 💖
+
+<br><br>
+
+Ready for the next surprise?
+
+</p>
+
+<button id="museumBtn">
+💌 Enter Love Museum
+</button>
+
+`;
+document.getElementById("museumBtn").onclick=function(){
+
+let room=1;
+
+showRoom();
+
+function showRoom(){
+
+if(room==1){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>🏛 Room 1</h1>
+
+<h2>How We Met ❤️</h2>
+
+<p>
+Ek random Telegram GC...<br><br>
+
+Ek random "Hi"...<br><br>
+
+Aur pata hi nahi chala,
+kab tum meri favourite notification ban gayi. ❤️
+</p>
+
+<button onclick="nextRoom()">
+Next ➜
+</button>
+
+`;
+
+}
+
+else if(room==2){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>🏛 Room 2</h1>
+
+<h2>The Beginning 💖</h2>
+
+<p>
+
+Ek simple conversation...
+
+<br><br>
+
+Aur phir dheere dheere,
+
+meri har smile ka reason
+sirf tum ban gayi. ❤️
+
+</p>
+
+<button onclick="nextRoom()">
+Next ➜
+</button>
+
+`;
+
+}
+
+else if(room==3){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>🏛 Room 3</h1>
+
+<h2>Movie Date 🍿</h2>
+
+<p>
+
+📅 9 July 2026
+
+<br><br>
+
+Movie achhi thi...
+
+<br><br>
+
+Lekin meri favourite scene,
+
+mere paas baithi hui tum thi. ❤️
+
+</p>
+
+<button onclick="nextRoom()">
+Next ➜
+</button>
+
+`;
+
+}
+
+else if(room==4){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>🏛 Room 4</h1>
+
+<h2>Late Night Chats 🌙</h2>
+
+<p>
+
+Random chats...
+
+<br><br>
+
+Random laughs...
+
+<br><br>
+
+Aur har notification ka
+intezaar sirf tumhara. ❤️
+
+</p>
+
+<button onclick="nextRoom()">
+Next ➜
+</button>
+
+`;
+
+}
+
+else if(room==5){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>🏛 Room 5</h1>
+
+<h2>Forever ❤️</h2>
+
+<p>
+
+Bas ek wish hai...
+
+<br><br>
+
+Har National Girlfriend Day,
+
+main tumhare saath hi celebrate karun. 💖
+
+</p>
+
+<button id="investigationBtn">
+Continue ❤️
+</button>
+
+`;
+document.getElementById("investigationBtn").onclick=function(){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>🕵️ CONFIDENTIAL FILE</h1>
+
+<h2 style="margin-top:20px;">Suspect</h2>
+
+<p style="font-size:24px;font-weight:bold;">
+❤️ Snoor ❤️
+</p>
+
+<hr style="margin:20px 0;border:1px solid rgba(255,255,255,.3);">
+
+<p style="line-height:2;">
+
+Crime:<br>
+❤️ Stealing my  Heart 
+<br><br>
+
+Evidence Found:
+
+<br>
+
+✅ Cute Smile
+
+<br>
+
+✅ Sweet Nature
+
+<br>
+
+✅ Endless Chats
+
+<br>
+
+✅ Dangerous Eyes 👀
+
+</p>
+
+<hr style="margin:20px 0;border:1px solid rgba(255,255,255,.3);">
+
+<h2>Verdict</h2>
+
+<p style="font-size:22px;">
+
+Lifetime Prison ❤️
+
+<br><br>
+
+Inside Jagat's Heart Forever. 🔐
+
+</p>
+
+<button id="futureBtn">
+🤖 Predict Our Future
+</button>
+
+`;
+document.getElementById("futureBtn").onclick=function(){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>🤖 AI Future Predictor</h1>
+
+<p id="futureText">
+Connecting to Future...
+</p>
+
+<div style="
+width:100%;
+height:20px;
+background:rgba(255,255,255,.3);
+border-radius:20px;
+overflow:hidden;
+margin-top:20px;">
+
+<div id="futureBar" style="
+width:0%;
+height:100%;
+background:#00ff99;
+transition:.8s;">
+</div>
+
+</div>
+
+`;
+
+let futureSteps=[
+"Scanning 2030... ❤️",
+"Scanning 2040... 😄",
+"Scanning 2050... 💖",
+"Future Ready... ✨"
+];
+
+let k=0;
+
+let future=setInterval(function(){
+
+document.getElementById("futureText").innerHTML=futureSteps[k];
+
+document.getElementById("futureBar").style.width=((k+1)*25)+"%";
+
+k++;
+
+if(k==futureSteps.length){
+
+clearInterval(future);
+
+setTimeout(function(){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>🔮 Future Report</h1>
+
+<p style="line-height:2;font-size:20px;">
+
+📅 2030 — Still Together ❤️
+
+<br><br>
+
+📅 2040 — Still Annoying Each Other 😂
+
+<br><br>
+
+📅 2050 — Still Holding Hands... Still Choosing Each Other. ❤️
+
+</p>
+
+<button id="hugBtn">
+🤗 Send Virtual Hug
+</button>
+
+`;
+document.getElementById("hugBtn").onclick=function(){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>🤗 Virtual Hug Machine</h1>
+
+<p id="hugText">
+Preparing Warm Hug...
+</p>
+
+<div style="
+width:100%;
+height:20px;
+background:rgba(255,255,255,.3);
+border-radius:20px;
+overflow:hidden;
+margin-top:20px;">
+
+<div id="hugBar" style="
+width:0%;
+height:100%;
+background:#ff66b3;
+transition:.8s;">
+</div>
+
+</div>
+
+`;
+
+let hugSteps=[
+"Collecting Love... ❤️",
+"Adding Warmth... 🥹",
+"Wrapping Tight Hug... 🤗",
+"Delivering To Baby... 💌",
+"Hug Delivered Successfully ❤️"
+];
+
+let h=0;
+
+let hug=setInterval(function(){
+
+document.getElementById("hugText").innerHTML=hugSteps[h];
+
+document.getElementById("hugBar").style.width=((h+1)*20)+"%";
+
+h++;
+
+if(h==hugSteps.length){
+
+clearInterval(hug);
+
+setTimeout(function(){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>🤗 Hug Delivered!</h1>
+
+<p style="font-size:22px;line-height:2;">
+
+Distance doesn't matter... ❤️
+
+My hugs will always find you. 🫂
+
+</p>
+
+<button id="wheelBtn">
+🎰 Spin Lucky Love Wheel
+</button>
+
+`;
+document.getElementById("wheelBtn").onclick=function(){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>🎰 Lucky Love Wheel</h1>
+
+<p id="wheelText">
+Press the button to spin... ❤️
+</p>
+
+<button id="spinBtn">
+🎡 SPIN NOW
+</button>
+
+`;
+
+document.getElementById("spinBtn").onclick=function(){
+
+const prizes=[
+
+"🤗 Unlimited Virtual Hugs",
+
+"📞 Long Call Pass",
+
+"🎥 Online Movie Date",
+
+"📸 Cute Selfie Requested",
+
+"🎵 One Song Dedication",
+
+"💌 Secret Love Letter",
+
+"💋 Kiss Coupon (Valid When We Meet ❤️)",
+
+"👑 World's Best Girlfriend Award 🏆"
+
+];
+
+document.getElementById("spinBtn").disabled=true;
+
+let count=0;
+
+let spin=setInterval(function(){
+
+document.getElementById("wheelText").innerHTML=
+
+prizes[Math.floor(Math.random()*prizes.length)];
+
+count++;
+
+if(count==15){
+
+clearInterval(spin);
+
+let finalPrize=prizes[Math.floor(Math.random()*prizes.length)];
+
+document.getElementById("wheelText").innerHTML=
+
+"<h2>"+finalPrize+"</h2>";
+
+document.querySelector(".card").innerHTML+=`
+
+<br>
+
+<button id="chatBtn">
+📱 Open Our Chat
+</button>
+
+`;
+document.getElementById("chatBtn").onclick=function(){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>💬 Our Chats</h1>
+
+<div id="chatBox" style="
+text-align:left;
+background:rgba(255,255,255,.12);
+padding:20px;
+border-radius:20px;
+height:320px;
+overflow:auto;
+margin-top:20px;
+">
+
+</div>
+
+`;
+
+let chats=[
+
+"🧑 Jagat: Good Morning Baby ❤️",
+
+"👩 Snoor: Good Morning Jii ☀️",
+
+"🧑 Jagat: Happy National Girlfriend Day, Baby! 🥹❤️",
+
+"👩 Snoor: Awww... Thank You! ❤️",
+
+"🧑 Jagat: I Made Something Special Just For You. 🎁",
+
+"👩 Snoor: Really? 😍",
+
+"🧑 Jagat: Scroll Down... The Best Surprise Is Waiting. ❤️"
+
+];
+let i=0;
+
+let typing=setInterval(function(){
+
+document.getElementById("chatBox").innerHTML+=`
+
+<div style="
+background:#ffffff22;
+padding:10px;
+border-radius:12px;
+margin-bottom:12px;
+">
+
+${chats[i]}
+
+</div>
+
+`;
+
+document.getElementById("chatBox").scrollTop=
+document.getElementById("chatBox").scrollHeight;
+
+i++;
+
+if(i==chats.length){
+
+clearInterval(typing);
+
+setTimeout(function(){
+
+document.querySelector(".card").innerHTML+=`
+
+<br>
+
+<button id="giftBtn">
+🎁 Open Mystery Gift
+</button>
+
+`;
+document.getElementById("giftBtn").onclick=function(){
+
+let step=1;
+
+showGift();
+
+function showGift(){
+
+if(step==1){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>🎁 Mystery Gift</h1>
+
+<h2>Don't Open... 🙈</h2>
+
+<br>
+
+<button onclick="nextGift()">
+Open Anyway ❤️
+</button>
+
+`;
+
+}
+
+else if(step==2){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>🤭 Are You Sure?</h1>
+
+<p>
+
+Iske baad wapas jaane ka option nahi milega. 😜
+
+</p>
+
+<br>
+
+<button onclick="nextGift()">
+Yes ❤️
+</button>
+
+`;
+
+}
+
+else if(step==3){
+
+document.querySelector(".card").innerHTML=`
+
+<h1>🥹 Really Sure?</h1>
+
+<p>
+
+Last Chance...
+
+Ready Baby? ❤️
+
+</p>
+
+<br>
+
+<button onclick="nextGift()">
+Open My Gift 🎁
+</button>
+
+`;
+
+}
+
+else{
+
+document.querySelector(".card").innerHTML=`
+
+<h1 style="
+font-size:50px;
+text-shadow:0 0 20px #fff,0 0 40px pink;
+">
+💖 Surprise 💖
+</h1>
+
+<p style="
+font-size:22px;
+line-height:2;
+text-shadow:0 0 12px #ff9ecf;
+">
+
+❤️ 1000 Hearts For You
+
+<br><br>
+
+💖 Unlimited Love
+
+<br><br>
+
+🤗 Unlimited Virtual Hugs
+
+<br><br>
+
+🌍 World's Best Girlfriend Award
+
+</p>
+
+<br>
+
+<button id="letterBtn">
+💌 Read My Letter
+</button>
+
+`;
+
+document.getElementById("letterBtn").onclick=function(){
+
+document.querySelector(".card").innerHTML=`
+
+<h1 style="
+text-shadow:0 0 20px pink,0 0 40px white;
+">
+💌 To My Baby ❤️
+</h1>
+
+<p style="
+font-size:22px;
+line-height:2;
+text-shadow:0 0 12px #ff9ecf;
+">
+
+Happy National Girlfriend Day ❤️
+
+<br><br>
+
+Thank You for being a part of my life.
+
+<br><br>
+
+Thank You for every smile,
+every laugh,
+and every beautiful memory.
+
+<br><br>
+
+No matter how many kilometers are between us...
+
+You'll always be my favourite person.
+
+<br><br>
+
+I Love You So Much Baby.
+
+<br><br>
+
+Forever Yours,
+
+<br>
+
+❤️ Jagat ❤️
+
+</p>
+
+<div id="heartRain" style="font-size:35px;">
+❤️ 💖 💕 💗 💓 💞 ❤️ 💖 💕
+</div>
+
+<p style="
+font-size:20px;
+margin-top:20px;
+font-weight:bold;
+text-shadow:0 0 10px white,0 0 20px pink;
+animation:glow 1.5s infinite alternate;
+">
+✨ Happy National Girlfriend Day Baby ✨
+</p>
+
+<br>
+
+<button onclick="location.reload()">
+🔄 Replay Our Story
+</button>
+
+`;
+};
+
+}
+
+}
+
+window.nextGift=function(){
+
+step++;
+
+showGift();
+
+}
+
+};
+},1000);
+
+}
+
+},1200);
+
+};
+}
+
+},120);
+
+};
+
+};
+
+},800);
+
+}
+
+},1000);
+
+};
+},800);
+
+}
+
+},1000);
+
+};
+};
+}
+
+}
+
+window.nextRoom=function(){
+
+room++;
+
+showRoom();
+
+}
+
+};
+}
+
+};
+
+};
+},1000);
+
+}
+
+},1000);
+
+};
+};
+};
+},800);
+
+}
+
+},1000);
+};
+
+};
+
+</script>
+</body>
+</html>
